@@ -30,10 +30,10 @@ def recommend(musics):
     return recommended_music, recommended_music_poster
 
 
-music_dict = pickle.load(open(r"D:\Downloads\Fresh file\musicrec.pkl", 'rb'))
+music_dict = pickle.load(open(r"./musicrec.pkl", 'rb'))
 music = pd.DataFrame(music_dict)
 
-similarity = pickle.load(open(r"D:\Downloads\Fresh file\similarities.pkl", 'rb'))
+similarity = pickle.load(open(r"./similarities.pkl", 'rb'))
 st.title('Music Recommendation System')
 
 selected_music_name = st.selectbox('Select a music you like', music['title'].values)
